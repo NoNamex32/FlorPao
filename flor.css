@@ -1,0 +1,132 @@
+body {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: #f2f2f2;
+
+}
+
+.flor {
+
+  position: relative;
+
+  width: 300px;
+
+  height: 300px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 0;
+
+}
+
+.petalo {
+
+  position: absolute;
+
+  width: 120px;
+
+  height: 60px;
+
+  background: linear-gradient(to bottom right, #ffd700, #f5c200);
+
+  border-radius: 50% 50% 0 0;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  transform: rotate(calc(var(--i) * 60deg));
+
+  animation: girar 5s infinite linear;
+
+  z-index: 1;
+
+}
+
+.petalo:nth-child(1) { --i: 1; }
+
+.petalo:nth-child(2) { --i: 2; }
+
+.petalo:nth-child(3) { --i: 3; }
+
+.petalo:nth-child(4) { --i: 4; }
+
+.petalo:nth-child(5) { --i: 5; }
+
+.petalo:nth-child(6) { --i: 6; }
+
+.centro {
+
+  position: absolute;
+
+  width: 80px;
+
+  height: 80px;
+
+  background: #8b4513;
+
+  border-radius: 50%;
+    
+  z-index: 2;
+
+}
+
+.tallo {
+
+  position: absolute;
+
+  width: 30px;
+
+  height: 150px;
+
+  background: #228b22;
+
+  bottom: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: -1;
+
+}
+
+.mensaje {
+
+  position: absolute;
+
+  top: -50px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+
+  font-size: 24px;
+
+  color: #333;
+
+  font-family: cursive;
+
+}
+
+@keyframes girar {
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+    
+
+}
